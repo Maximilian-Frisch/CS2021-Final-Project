@@ -1,16 +1,19 @@
+import os
 import webapp2
+import jinja2
 
-form = """
-<form>
-    <input name="q">
-    <input type="submit">
-</form>
-"""
+jinja_environment = jinja2.Environment(autoescape=True,
+                                       loader = jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
 class MainPage(webapp2.RequestHandler):
-    def get(self):
-        self.response.headers['Content-Type'] = 'text/html'
-        self.response.out.write(form)
 
-application = webapp2.WSGIApplication([('/', MainPage)],
-                             debug=True)
+    def get(self):
+        template_values = {
+            'name': 'SomeGuy',
+            'verb': 'extremely enjoy'
+        }
+
+    template = jinja_environment.get_template('index.html')
+    self.response.out.write(template.render(template_values))
+    
+application = webapp2.WSGIApplication([('/', MainPage)], debug=True)
