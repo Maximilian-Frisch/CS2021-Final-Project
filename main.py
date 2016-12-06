@@ -12,5 +12,5 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/html'
         self.response.out.write(form)
 
-app = webapp2.WSGIApplication([('/', MainPage)],
+application = webapp2.WSGIApplication([('/', MainPage)],
                              debug=True)
