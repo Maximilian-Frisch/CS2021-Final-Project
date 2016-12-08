@@ -23,10 +23,10 @@ class Handler(webapp2.RequestHandler):
 class MainPage(Handler):
     
     def render_front(self, error=""):
-        self.render("index.html", error = error)
+        self.render("ministries.html", error = error)
         
     def get(self):
         self.render_front()
     
     
-application = webapp2.WSGIApplication([('/', MainPage)], debug=True)
+application = webapp2.WSGIApplication([('/', Ministries)], debug=True)

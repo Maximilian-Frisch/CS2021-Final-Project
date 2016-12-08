@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-    
-    <style type="text/css">
-        body {
-            font-family: sans-serif; width: 800px; margin: 0 auto; padding: 10px;
-        }
-        error {
-            color: red;
-        }
-        label {
-            display: block; font-size: 20px;
-        }
-        input[type=text] {
-            width: 400px; font-size: 20px; padding: 2px;
-        }
-        textarea {
-            width: 400px; height: 200px; font-size: 17px; font-family: monospace;
-        }
-        input[type=submit] {
-            font-size: 24px;
-        }
-        hr {
-            margin: 20px auto;
-        }
-
-        .art + .art {
-            margin-top: 20px;
-        }
-        .art-title {
-            font-weight: bold; font-size: 20px;
-        }
-        .art-body {
-            margin: 0; font-size: 17px;
-        }
+    <style>
+        
     </style>
     
     <head>
-        <title>/ascii/</title>
+        <link rel="stylesheet" type="text/css" href="welcome.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+        <img src="https://storage.googleapis.com/cs2021-final-project.appspot.com/page_header-01.svg" id="header"> 
     </head>
     
     <body>
-        
-        <h1>/ascii/</h1>
-        
-        <form method="post">
-            <label>
-                <div>title</div> <input type="text" name="title" value= {{title}}>
-            </label>
-            <label>
-                <div>art</div> <textarea name="art" {{art}} ></textarea>
-            </label>
-            <div class="error"> {{ error }}</div>
-            <input type="submit">
-        </form>
-        
-        <hr>
-        {% for art in arts %}
-        <div class="art">
-            <div class="art-title">{{art.title}}</div>
-            <pre class="art-body">{{art.art}}</pre>
+        <div style="margin-left:15%">
+            <p class="links" style="margin-left:5%">About</p>
+            <p class="links" style="margin-left:10%">Ministries</p>
         </div>
-        {% endfor %}
-    
+        <div style="margin-left:60%">
+            <p class="links" style="margin-left:10%">Contact</p>
+            <p class="links" style="margin-left:22%">Give</p>
+        </div>
+        <hr color="#C1D62F" width="70%">
+        
+        <div class="Welcome" id="fade">
+            <div class="welcomeHeaders">Welcome</div>
+            <p class="text">
+                Young Life thinks the world of kids. We believe that they deserve to know what life can hold for them.
+                Young Life leaders are caring adults who come sharing that hope as well as fun and lasting friendships with kids.
+                From club and camp to Campaigners and other activities, teens have a blast laughing,
+                trying new things and being with their friends.
+            </p>
+        </div>
+           
+      
+         
+        <div>
+            <p style="text-align:center;" id="fade">
+                <img src="https://storage.googleapis.com/cs2021-final-project.appspot.com/ChristmasParty%20Leaders.jpg" width="55%" style="border-radius:25px;">
+            </p>
+        </div>
+        
+     
+        
+        <div class="Welcome" id="fade">
+            <div class="leaderHeaders">A Leader's Role</div>
+            <p class="text" id="fade">
+                Leaders are committed to being involved with kids' lives
+                -- from supporting them at their sporting events to listening to them talk about what's important to them.
+                Our leaders help kids consider the direction of their lives, and they offer hope for their future.
+            </p>
+        </div>
+        
+        <br>
+        <hr color="#C1D62F" width="70%">
+        
+        <br><br><br>
+        
+        <img src="https://storage.googleapis.com/cs2021-final-project.appspot.com/bottom_tag-01.svg">
+        
     </body>
     
 </html>

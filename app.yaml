@@ -10,5 +10,8 @@ libraries:
 
 handlers:
 - url: /.*
+  static_files: welcome.css
+- url: /.*
   script: main.application
+
 
