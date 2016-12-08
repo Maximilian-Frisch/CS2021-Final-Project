@@ -9,8 +9,8 @@ libraries:
   version: latest
 
 handlers:
-- url: /.*
-  static_files: welcome.css
+- url: /templates/.css
+  static_file: welcome.css
 - url: /.*
   script: main.application
 
