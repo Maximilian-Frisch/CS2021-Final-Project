@@ -11,6 +11,18 @@ libraries:
 handlers:
 - url: /templates
   static_dir: templates
+- url: /ministries.html
+  static_files: ministries/ministries.html
+  upload: ministries/ministries.html
+- url: /about.html
+  static_files: about/about.html
+  upload: about/about.html
+- url: /contact.html
+  static_files: contact/contact.html
+  upload: contact/contact.html
+- url: /give.html
+  static_files: give/give.html
+  upload: give/give.html
 - url: /.*
   script: main.application
 
