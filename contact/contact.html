@@ -5,9 +5,68 @@
         .welcomeHeaderM{
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 50px;
-            padding-left: 35%;
+            text-align: center;
         }
+        .contact{
+            text-align: center;
+        }
+        #right-side{}
+            width: 50%;
+        }
+        #left-side{
+            margin-right: 25%;
+        }
+        form{
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+            
+        }
+        #input-submit{
+            color: white;
+            background: #054261;
+            cursor: pointer;
+            width: 600px;
+            height: 40px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #input-message{ 
+            padding: 1em;
+            display: block;
+            width: 275px;
+            height: 150px;
+            margin-top: 1em;
+            border-radius: 8px;
+            resize: none;
+        }
+        .half{
+            float: left;
+            width: 48%;
+            margin-bottom: 1em;
+        }
+        #input-name{
+            width: 200px;
+            height: 20px;
+            border-radius: 8px;
+            margin-top: 1em;        
+        }
+        #input-email{
+            width: 200px;
+            height: 20px;
+            border-radius: 8px;
+            margin-top: 1em;        
+        }
+        #input-subject{
+            width: 200px;
+            height: 20px;
+            border-radius: 8px;
+            margin-top: 1em;        
+        }
+        
     </style>
+    
     <head>
         <link rel="stylesheet" type="text/css" href="/templates/welcome.css"> 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
@@ -26,14 +85,31 @@
         <hr color="#C1D62F" width="70%">
         
         <div class="Welcome" id="fade">
-            <div class="welcomeHeaderM">Contact Us</div>
+            <div class="welcomeHeaderM">Area Contact Information</div>
             <p class="text">
-                
+                Young Life SE Cincinnati:
+                <br>
+                1078 Birney Ln, Cincinnati, OH 45230-3754
+                <br>
+                SECYoungLife@gmail.com : 513.284.1120
+                <br>
             </p>
+            <h1 style="text-align: center">E-mail Us!</h1>
+            <form class="contact">
+                <div class="half" id="right-side">
+                    <input type="text" id="input-name" placeholder="Name"><br><br>
+                    <input type="email" id="input-email" placeholder="Email address"><br><br>
+                    <input type="text" id="input-subject" placeholder="Subject"><br>
+                </div>
+                <div class="half" id="left-side">
+                    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                </div>  
+                <input type="submit" value="Submit" id="input-submit">
+            </form>
         </div>
       
+        <br>
         <hr color="#C1D62F" width="70%">
-        
         <br><br>
         
         <img src="https://storage.googleapis.com/cs2021-final-project.appspot.com/bottom_tag-01.svg">
